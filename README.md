@@ -1,6 +1,6 @@
 # Project Full Stack Advocacia
 
-Aplicacao full stack para visualizacao, pesquisa e analise de dados de agendamentos juridicos.
+Aplicação full stack para visualização, pesquisa e analise de dados de agendamentos juridicos.
 
 ## Entrega
 
@@ -126,7 +126,7 @@ O front-end sera executado localmente pelo Vite. A URL padrao geralmente e:
 http://localhost:5173
 ```
 
-No Windows, se o PowerShell bloquear `npm` por politica de execucao, use:
+No Windows, se o PowerShell bloquear `npm` por politica de execução, use:
 
 ```powershell
 npm.cmd install
@@ -148,40 +148,40 @@ Existe um arquivo `.env.example` com o modelo esperado.
 - Cards de KPI: total de atendimentos, total concluidos, total cancelados e receita total.
 - Grafico de pizza com distribuicao de atendimentos por status.
 - Grafico de linha com evolucao mensal do numero de atendimentos.
-- Tabela de agendamentos com cliente, data, hora, responsavel, organizacao, status e realizado.
+- Tabela de agendamentos com cliente, data, hora, responsavel, organização, status e realizado.
 - Busca textual em tempo real.
-- Filtros por status, tipo, realizado, organizacao, responsavel e periodo.
+- Filtros por status, tipo, realizado, organização, responsavel e periodo.
 - Ordenacao nas colunas da tabela.
-- Paginacao com selecao de quantidade por pagina.
-- Exportacao CSV da listagem filtrada.
-- Exportacao PDF da listagem filtrada.
+- Paginação com seleção de quantidade por pagina.
+- Exportação CSV da listagem filtrada.
+- Exportação PDF da listagem filtrada.
 - Estados de loading e erro nas chamadas de API.
 - Layout responsivo para telas a partir de 768px.
 
 ## Dependencias utilizadas
 
-- `express`: criacao da API REST.
-- `cors`: liberacao de acesso entre front-end e back-end.
+- `express`: criação da API REST.
+- `cors`: liberação de acesso entre front-end e back-end.
 - `nodemon`: reinicio automatico do servidor durante desenvolvimento.
-- `react` e `react-dom`: construcao da interface.
+- `react` e `react-dom`: construção da interface.
 - `vite`: servidor de desenvolvimento e build do front-end.
 - `axios`: consumo da API REST.
 - `recharts`: graficos do dashboard.
-- `jspdf` e `jspdf-autotable`: exportacao da listagem filtrada em PDF.
+- `jspdf` e `jspdf-autotable`: exportação da listagem filtrada em PDF.
 - `lucide-react`: icones da interface.
 
-## Decisoes tecnicas
+## Decisões tecnicas
 
 - A base de dados fica em arquivo JSON, conforme exigido pela prova.
 - As respostas da API seguem uma estrutura consistente com `success`, `data`, `meta`, `filters`, `sort` ou `error`.
 - A busca textual ignora maiusculas, minusculas e acentos.
-- A regra de filtro e ordenacao fica no back-end para manter a fonte de verdade centralizada.
+- A regra de filtro e ordenação fica no back-end para manter a fonte de verdade centralizada.
 - O front-end busca todas as paginas filtradas antes de exportar CSV/PDF, garantindo que os arquivos reflitam os filtros ativos.
 - O backend foi organizado em `routes/`, `controllers/`, `services/`, `data/`, `middlewares/` e `utils/`.
 
-## Limitacoes conhecidas e melhorias futuras
+## Limitações conhecidas e melhorias futuras
 
-- A base fornecida nao possui campo de receita; por isso `receitaTotal` retorna `0`.
+- A base fornecida não possui campo de receita; por isso `receitaTotal` retorna `0`.
 - Os campos `servico` e `local` vieram vazios na base atual.
 - Uma melhoria futura seria adicionar testes automatizados de API e componentes.
 - Outra melhoria seria permitir configuracao visual dos graficos e exportacoes.
