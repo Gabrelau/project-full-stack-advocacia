@@ -2,6 +2,16 @@
 
 Aplicacao full stack para visualizacao, pesquisa e analise de dados de agendamentos juridicos.
 
+## Entrega
+
+Este projeto deve ser avaliado a partir do repositorio GitHub:
+
+```txt
+https://github.com/Gabrelau/project-full-stack-advocacia
+```
+
+As URLs `localhost` citadas neste README sao apenas para executar o back-end e o front-end na maquina do avaliador depois de clonar o repositorio.
+
 ## Stack
 
 - Back-end: Node.js + Express
@@ -46,7 +56,7 @@ npm install
 npm run dev
 ```
 
-A API roda por padrao em:
+A API roda localmente por padrao em:
 
 ```txt
 http://localhost:3333
@@ -110,7 +120,7 @@ npm install
 npm run dev
 ```
 
-O front-end sera executado pelo Vite. A URL padrao geralmente e:
+O front-end sera executado localmente pelo Vite. A URL padrao geralmente e:
 
 ```txt
 http://localhost:5173
@@ -125,7 +135,7 @@ npm.cmd run dev
 
 ### Variaveis de ambiente
 
-Crie um arquivo `.env` dentro de `frontend/` quando precisar alterar a URL da API:
+Crie um arquivo `.env` dentro de `frontend/` quando precisar alterar a URL local da API:
 
 ```env
 VITE_API_URL=http://localhost:3333/api
